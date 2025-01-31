@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Tech Tags</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="exp_style.css">
+</head>
+<body>
+    <div class="container-subjects">
+        <h2>Choose your areas of expertise</h2>
+        <div class="tags" id="tagContainer">
+            <div class="tag" onclick="toggleTag(this)"><span class="tag-content">Cloud Computing</span><span class="icon">+</span></div>
+            <div class="tag" onclick="toggleTag(this)"><span class="tag-content">DevOps</span><span class="icon">+</span></div>
+            <div class="tag" onclick="toggleTag(this)"><span class="tag-content">Artificial Inteligence</span><span class="icon">+</span></div>
+            <div class="tag" onclick="toggleTag(this)"><span class="tag-content">Machine Learning</span><span class="icon">+</span></div>
+            <div class="tag" onclick="toggleTag(this)"><span class="tag-content">Cyber Security</span><span class="icon">+</span></div>
+            <div class="tag" onclick="toggleTag(this)"><span class="tag-content">Computational Biology</span><span class="icon">+</span></div>
+        </div>
+    </div>
+
+    <script>
+        function toggleTag(element) {
+            element.classList.toggle("selected");
+            let icon = element.querySelector(".icon");
+            icon.textContent = element.classList.contains("selected") ? "×" : "+";
+        }
+    </script>
+</body>
+</html>
